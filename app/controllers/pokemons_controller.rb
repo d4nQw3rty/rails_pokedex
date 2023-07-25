@@ -10,6 +10,7 @@ class PokemonsController < ApplicationController
     normalized_name = params[:name].downcase
     response = Faraday.get("https://pokeapi.co/api/v2/pokemon/#{normalized_name}")
     json = JSON.parse(response.body)
+    
     @pokemon = {
       name: json["name"].capitalize,
       image: json["sprites"]["other"]["official-artwork"]["front_default"],
@@ -17,7 +18,8 @@ class PokemonsController < ApplicationController
       weight: json["weight"],
       height: json["height"],
       types: json["types"],
-      abilities: json["abilities"]
+      abilities: json["abilities"],
+      moves: json["moves"]
       # Add other attributes as needed
     }
   rescue JSON::ParserError
