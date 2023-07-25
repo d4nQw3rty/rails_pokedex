@@ -1,16 +1,42 @@
-<h1><%= @pokemon[:name] %></h1>
-<img src="<%= @pokemon[:image] %>" alt="<%= @pokemon[:name] %>">
-<ul>
-  <li><strong>ID:</strong> <%= @pokemon[:id] %></li>
-  <li><strong>Weight:</strong> <%= @pokemon[:weight] %> kg</li>
-  <li><strong>Height:</strong> <%= @pokemon[:height] %> m</li>
-  <li><strong>Type(s):</strong> <%= @pokemon[:types].join(', ') %></li>
-  <% if @pokemon[:abilities].any? %>
-    <li><strong>Abilities:</strong></li>
-    <ul>
-      <% @pokemon[:abilities].each do |ability| %>
-        <li><%= ability %></li>
-      <% end %>
-    </ul>
-  <% end %>
-</ul>
+<div class="container mt-5">
+  <div class="card text-bg-secondary border-danger mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">     
+        <img src="<%= @pokemon[:image] %>" class="img-fluid rounded-start " alt="<%= @pokemon[:name] %>">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><%= @pokemon[:name] %></h5>
+          <p class="card-text">
+            <ul>
+              <li><strong>ID: </strong><span class="badge text-bg-dark"> <%= @pokemon[:id] %></span> </li>
+              <li><strong>Weight: </strong><span class="badge text-bg-dark"> <%= @pokemon[:weight] %></span></li>
+              <li><strong>Height:</strong> <span class="badge text-bg-dark"> <%= @pokemon[:height] %></span></li>
+              <% if @pokemon[:types].any? %>
+                <li><strong>Type(s):</strong></li>
+                  
+                    <% @pokemon[:types].each do |type|%>
+                      <span class="badge text-bg-dark"><%= type["type"]["name"].capitalize %></span>
+                    <% end %>
+                  
+              <% end %>  
+              <% if @pokemon[:abilities].any? %>
+                <li><strong>Abilities:</strong></li>
+                  
+                    <% @pokemon[:abilities].each do |ability| %>
+                      <span class="badge text-bg-dark"><%= ability["ability"]["name"].capitalize %></span>
+                    <% end %>
+                 
+              <% end %>
+    
+               <li><strong>Moves:</strong></li>
+                 <% @pokemon[:moves].each do |move| %>
+                   <span class="badge text-bg-dark"><%= move["move"]["name"].capitalize %></span>
+                 <% end %>
+            </ul>
+          </p>        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
