@@ -19,7 +19,7 @@
         <p class="card-text">
         <strong>Abilities</strong>
         <br>
-        <%= pokemon[:abilities] %>
+        <%= pokemon[:abilities].capitalize %>
         </p>
         <%= link_to "Details", pokemon_path(name: pokemon[:name]), class: "btn btn-primary" %>
       </div>
