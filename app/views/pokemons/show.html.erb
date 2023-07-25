@@ -1,0 +1,16 @@
+<h1><%= @pokemon[:name] %></h1>
+<img src="<%= @pokemon[:image] %>" alt="<%= @pokemon[:name] %>">
+<ul>
+  <li><strong>ID:</strong> <%= @pokemon[:id] %></li>
+  <li><strong>Weight:</strong> <%= @pokemon[:weight] %> kg</li>
+  <li><strong>Height:</strong> <%= @pokemon[:height] %> m</li>
+  <li><strong>Type(s):</strong> <%= @pokemon[:types].join(', ') %></li>
+  <% if @pokemon[:abilities].any? %>
+    <li><strong>Abilities:</strong></li>
+    <ul>
+      <% @pokemon[:abilities].each do |ability| %>
+        <li><%= ability %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</ul>

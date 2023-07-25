@@ -1,0 +1,109 @@
+<section class="container">
+  <div class="card mt-4">
+    <div class="row g-0">
+      <div class="col-md-4 align-self-center">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <%= image_tag "pikachu.webp", class: "d-block w-100 vh-90" %>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "eeve.webp", class: "d-block w-100 vh-90" %>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "elements.webp", class: "d-block w-100 vh-90" %>
+            </div>
+            <div class="carousel-item">
+              <%= image_tag "gengar.jpg", class: "d-block w-100 vh-90" %>
+            </div>     
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>             
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Become A Master <span class="solid solid-border">Pokemón</span></h5>
+          <div id="carouselExample" class="carousel slide custom-mt">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card mb-3" >
+                  <div class="row g-0">                        
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <p class="card-text"><strong> Check our Pokemon's magazine</strong> <small><%= link_to "let's go!" %></small></p>
+                        <small class="text-body-secondary">
+                          Stay ahead with the latest Pokemon news, statistics, and localizations. To be a true Master of Pokemons, you must have comprehensive knowledge about them
+                          <br> It is essential to keep updated about Pokemon gyms and centers as well as training and caring for your Pokemon.
+                          <br>Check out the special section "Battle Analysis" where we delve into the final tournament battle, interviewing each trainer to understand every move in this epic encounter.
+                        </small>
+                      </div>                          
+                    </div>
+                    <div class="col-md-4 align-self-center">                           
+                      <%= image_tag "magazine-1.jpg", class: "img-fluid rounded-start" %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+
+                <div class="card mb-3" >
+                  <div class="row g-0">                        
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <p class="card-text"><strong> Tournaments</strong> <small><%= link_to "participate!" %></small></p>
+                        <small class="text-body-secondary">
+                          A key aspect of becoming a Master of Pokemons is through battling other trainers.
+                          Not only does it provide an exciting challenge, but it also allows you to test and hone your skills as you face various opponents with different strategies and strengths.
+                          Check the tournaments schedule, register to participate, watch match videos, and test our battle simulator.
+                        </small>
+                      </div>                          
+                    </div>
+                    <div class="col-md-4 align-self-center">                           
+                      <%= image_tag "championship.webp", class: "img-fluid rounded-start" %>
+                    </div>
+                  </div>
+                </div>                            
+              </div>
+              
+              <div class="carousel-item">
+
+                <div class="card mb-3" >
+                  <div class="row g-0">                        
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <p class="card-text"><strong>Store</strong> <small><%= link_to "go!" %></small></p>
+                        <p class="card-text">
+                          <small class="text-body-secondary">
+                            Welcome! Whether you're looking to take great care of your Pokémon or pick up a souvenir, we've got everything you need and more. Discover our fantastic range of products and unbeatable deals. Come and see for yourself!
+                          </small>
+                        </p>                        
+                      </div>                          
+                    </div>
+                    <div class="col-md-4 align-self-center">                           
+                      <%= image_tag "store-pkmon-cut.jpg", class: "img-fluid rounded-start" %>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

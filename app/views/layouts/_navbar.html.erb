@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-danger">
+  <div class="container-fluid"> 
+    <%= link_to image_tag("poke_ball_32.png"), root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link #{is_active?(root_path)}" %>
+        </li>
+        <li class="nav-item">
+           <%= link_to "Pokedex", pokemons_path, class: "nav-link #{is_active?(pokemons_path)}" %>         
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact", contact_path, class: "nav-link #{is_active?(contact_path)}" %>
+        </li>  
+      </ul>      
+    </div>
+  </div>
+</nav>
