@@ -1,2 +1,26 @@
-<h1>Contact#index</h1>
-<p>Find me in app/views/contact/index.html.erb</p>
+<%= form_with(url: 'https://formspree.io/f/xnqwkwnk', method: 'POST', class: 'd-flex flex-column') do |form| %>
+  <div class="mb-3 col-4">
+    <%= form.label :full_name, class: 'form-label' do %>
+      Full Name:
+      <%= form.text_field :full_name, class: 'form-control', placeholder: 'John Doe', required: true %>
+    <% end %>
+  </div>
+  <div class="mb-3 col-4">
+    <%= form.label :email, class: 'form-label' do %>
+      Your email:
+      <%= form.email_field :email, class: 'form-control', placeholder: 'example@domain.com', required: true %>
+    <% end %>
+  </div>
+  <div class="mb-3 col-6">
+    <%= form.label :message, class: 'form-label' do %>
+      Your message:
+      <%= form.text_area :message, class: 'form-control' %>
+    <% end %>
+  </div>
+  
+  <!-- your other form fields go here -->
+  
+  <div class="mb-3 col-6">
+    <%= form.submit 'Send', class: 'btn btn-primary' %>
+  </div>
+<% end %>
