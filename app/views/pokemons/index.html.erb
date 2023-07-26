@@ -8,7 +8,7 @@
   <div class="d-flex flex-wrap justify-content-center gap-2">
     <% @pokemons.each do |pokemon|%>
 
-    <div class="card" style="width: 18rem">
+    <div class="card bgcad" style="width: 18rem">
       <img
         src="<%= pokemon[:image] %>"
         class="card-img-top"
@@ -28,7 +28,7 @@
     <% end %>
   </div>
   <div class="d-flex justify-content-center">
-    <%= paginate @pokemons, class: "pagination" %>
+    <p class="text-warning"><%= paginate @pokemons, class: "pagination" %></p>
   </div>
 </div>
 <%= turbo_frame_tag "modal" %>
