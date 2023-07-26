@@ -12,6 +12,7 @@ module PokemonApp
     config.load_defaults 7.0
     config.assets.enabled = true
     config.assets.paths << Rails.root.join('/app/assets/fonts')
+    Dotenv::Railtie.load
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

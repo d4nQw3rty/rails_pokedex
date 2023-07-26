@@ -79,3 +79,6 @@ gem 'faraday', '~> 2.7', '>= 2.7.10'
 
 # add kaminari to create pagination
 gem 'kaminari'
+
+# install dotenv
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
