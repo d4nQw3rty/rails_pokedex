@@ -64,9 +64,8 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-Visit the website: [@website](https://github.com/d4nQw3rty)
+Visit the website: [click me!](https://github.com/d4nQw3rty)
 
-Not yet available.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
