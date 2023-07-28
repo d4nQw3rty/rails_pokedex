@@ -90,7 +90,6 @@ Install this project with:
 
 ```
   bundle install
-  rails db:migrate
 ```
 
 ### Usage
